@@ -1,0 +1,18 @@
+body {
+  		padding-top: 50px;
+	}
+	.erroValidacao {
+	  color: #a94442;
+	  border-color: #a94442;
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	}
+	.erroValidacao:focus {
+		 border-color: #843534;
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+			  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+	}
+	.starter-template {
+  		padding: 40px 15px;
+  		text-align: center;
+	}

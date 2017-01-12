@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+<title>DataTables example</title>
+		<style type="text/css" title="currentStyle">
+			@import "../../media/css/demo_page.css";
+			@import "../../media/css/demo_table.css";
+		</style>
+		<script type="text/javascript" language="javascript" src="../../media/js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="../../media/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#example1').dataTable( {
+					"bProcessing": true,
+					"bServerSide": true,
+					"sAjaxSource": "../server_side/scripts/server_processing.php"
+				} );
+  //Requisição Ajax
+      /*$.ajax({
+         url: "../server_side/scripts/server_processing.php?sEcho=1&iColumns=3&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&bSortable_0=true&bSortable_1=true&bSortable_2=true", //URL de destino
+         dataType: "json", //Tipo de Retorno
+         success: function(json){ //Se ocorrer tudo certo
+            alert("aqui");
+			alert("i:"+json.aaData);
+         },
+		 error:function(){
+          alert("tome");
+      }   
+      });*/
+   
+			} );
+		</script>
+	</head>
+	<body id="dt_example">
+  <div id="container">
+			<div class="full_width big">
+				DataTables server-side processing example
+			</div>
+		
+			<div id="dynamic">
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example1">
+	<thead>
+		<tr>
+			<!--<th width="25%">ID ESTADO</th>-->
+            <th width="20%">ID CIDADE</th>
+			<th width="25%">DESC CIDADE</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="3" class="dataTables_empty">Loading data from server</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+        	<!--<th>ID ESTADO</th>-->
+			<th>ID CIDADE</th>
+			<th>DESC CIDADE</th>
+		</tr>
+	</tfoot>
+</table>
+			</div>
+			<div class="spacer"></div>
+			
+		</div>
+	</body>
+</html>
